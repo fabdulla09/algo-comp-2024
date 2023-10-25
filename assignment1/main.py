@@ -16,8 +16,11 @@ class User:
 
 # Takes in two user objects and outputs a float denoting compatibility
 def compute_score(user1, user2):
-    # YOUR CODE HERE
-    return 0
+    year_dif = user1.grad_year - user2.grad_year
+    sum = 0.0
+    if year_dif <= 1:
+        sum += 0.2
+    return sum
 
 
 if __name__ == '__main__':
